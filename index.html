@@ -11,15 +11,12 @@
 
     <meta
         name="description"
-        content="Personal academic website of Your Name, researcher in computer science."
+        content="Personal academic website of Your Name."
     >
 
     <title>Your Name</title>
 
-    <link
-        rel="stylesheet"
-        href="style.css"
-    >
+    <link rel="stylesheet" href="style.css">
 </head>
 
 
@@ -35,19 +32,23 @@
         aria-label="Toggle dark mode"
         title="Toggle dark mode"
     >
-        <span id="theme-icon">☾</span>
+        <svg
+            class="moon-icon"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+        >
+            <path
+                d="M21 12.79A9 9 0 1 1 11.21 3
+                   7 7 0 0 0 21 12.79Z"
+            />
+        </svg>
     </button>
 
 
-    <!-- =========================
-         Main Content
-         ========================= -->
-
     <main class="container">
 
-
         <!-- =========================
-             Profile / Introduction
+             Top / Profile Section
              ========================= -->
 
         <section class="profile">
@@ -59,7 +60,7 @@
                 <p>
                     I am a [current position] at
                     <a
-                        href="https://www.example.edu/"
+                        href="https://example.com"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
@@ -68,169 +69,131 @@
                 </p>
 
                 <p>
-                    My research interests are in
+                    My research interests lie in
                     <strong>machine learning</strong>,
                     <strong>computer vision</strong>,
                     and
-                    <strong>artificial intelligence</strong>.
-                    I am particularly interested in [briefly describe your
-                    specific research interests here].
+                    <strong>your specific research area</strong>.
+                    I am particularly interested in [one concise sentence
+                    describing the kinds of problems you want to study].
                 </p>
 
                 <p>
-                    I am currently applying to PhD programs in Computer Science
-                    for [Fall 2027 / your application cycle].
+                    Previously, I [brief sentence about your previous degree,
+                    research experience, or relevant position].
                 </p>
-
-
-                <!-- Profile links -->
 
                 <div class="profile-links">
 
-                    <a
-                        href="mailto:arbel1992@gmail.com"
-                    >
+                    <a href="mailto:you@example.com">
                         Email
                     </a>
 
-                    <span>·</span>
+                    <span>/</span>
 
                     <a
-                        href="https://scholar.google.com/citations?user=aAEPU8wAAAAJ&hl=en"
+                        href="assets/cv.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        CV
+                    </a>
+
+                    <span>/</span>
+
+                    <a
+                        href="https://scholar.google.com/"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
                         Google Scholar
                     </a>
 
-                    <span>·</span>
+                    <span>/</span>
 
                     <a
-                        href="www.linkedin.com/in/arbel-hizmi-110230174"
+                        href="https://github.com/YOUR-USERNAME"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        GitHub
+                    </a>
+
+                    <span>/</span>
+
+                    <a
+                        href="https://www.linkedin.com/"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
                         LinkedIn
                     </a>
 
-                    <span>·</span>
-
-                    <a
-                        href="assets/cv.pdf"
-                        target="_blank"
-                    >
-                        CV
-                    </a>
-
                 </div>
 
             </div>
 
 
-            <!-- Profile picture -->
-
-            <img
-                src="assets/profile.jpg"
-                alt="Your Name"
-                class="profile-image"
-            >
-
-        </section>
-
-
-
-        <!-- =========================
-             About
-             ========================= -->
-
-        <section>
-
-            <h2>About</h2>
-
-            <p>
-                I am currently [describe your current role, degree, university,
-                laboratory, or research position].
-            </p>
-
-            <p>
-                Previously, I [briefly describe relevant previous experience,
-                research internships, degrees, or work].
-            </p>
-
-            <p>
-                My long-term research goal is to [briefly describe the type of
-                research problems you want to work on].
-            </p>
-
-        </section>
-
-
-
-        <!-- =========================
-             Research Interests
-             ========================= -->
-
-        <section>
-
-            <h2>Research Interests</h2>
-
-            <p>
-                I am broadly interested in:
-            </p>
-
-            <ul>
-                <li>Machine Learning</li>
-                <li>Computer Vision</li>
-                <li>Multimodal Learning</li>
-                <li>Representation Learning</li>
-                <li>Generative Models</li>
-            </ul>
-
-        </section>
-
-
-
-        <!-- =========================
-             Research / Publications
-             ========================= -->
-
-        <section>
-
-            <h2>Research</h2>
-
-
-            <!-- Research Item 1 -->
-
-            <div class="research-item">
+            <div class="profile-image-wrapper">
 
                 <img
-                    src="images/project1.jpg"
-                    alt="Visualization for Project One"
-                    class="research-image"
+                    src="assets/profile.jpg"
+                    alt="Your Name"
+                    class="profile-image"
                 >
 
-                <div class="research-content">
+            </div>
 
-                    <div class="research-title">
-                        Title of Your Research Project or Paper
-                    </div>
+        </section>
 
-                    <div class="authors">
+
+
+        <!-- =========================
+             Publications
+             ========================= -->
+
+        <section>
+
+            <h2>Publications</h2>
+
+
+            <article class="publication">
+
+                <div class="publication-image-wrapper">
+
+                    <img
+                        src="images/project1.jpg"
+                        alt="Visualization of the research project"
+                        class="publication-image"
+                    >
+
+                </div>
+
+
+                <div class="publication-content">
+
+                    <h3>
+                        Cross modal
+                    </h3>
+
+                    <p class="authors">
                         <strong>Your Name</strong>,
                         Collaborator One,
                         Collaborator Two
-                    </div>
+                    </p>
 
-                    <div class="venue">
+                    <p class="venue">
                         Conference / Workshop / Preprint, 2026
-                    </div>
+                    </p>
 
-                    <div class="paper-links">
+
+                    <div class="publication-links">
 
                         <a
                             href="#"
                             target="_blank"
                             rel="noopener noreferrer"
+                            class="paper-button"
                         >
                             Paper
                         </a>
@@ -239,164 +202,32 @@
                             href="#"
                             target="_blank"
                             rel="noopener noreferrer"
-                        >
-                            Code
-                        </a>
-
-                        <a
-                            href="#"
-                            target="_blank"
-                            rel="noopener noreferrer"
+                            class="paper-button"
                         >
                             Project Page
                         </a>
 
-                    </div>
-
-                    <p>
-                        A short description of the project. Explain the main
-                        research problem, what you contributed, and why the
-                        result is interesting.
-                    </p>
-
-                </div>
-
-            </div>
-
-
-
-            <!-- Research Item 2 -->
-
-            <div class="research-item">
-
-                <img
-                    src="images/project2.jpg"
-                    alt="Visualization for Project Two"
-                    class="research-image"
-                >
-
-                <div class="research-content">
-
-                    <div class="research-title">
-                        Another Research Project
-                    </div>
-
-                    <div class="authors">
-                        <strong>Your Name</strong>,
-                        Collaborator One
-                    </div>
-
-                    <div class="venue">
-                        Research Project, 2025
-                    </div>
-
-                    <div class="paper-links">
-
                         <a
                             href="#"
                             target="_blank"
                             rel="noopener noreferrer"
-                        >
-                            Paper
-                        </a>
-
-                        <a
-                            href="#"
-                            target="_blank"
-                            rel="noopener noreferrer"
+                            class="paper-button"
                         >
                             Code
                         </a>
 
                     </div>
 
-                    <p>
-                        Briefly explain the research question, your approach,
-                        and your contribution.
+
+                    <p class="publication-description">
+                        One or two sentences describing the main research
+                        problem, your approach, and the central contribution
+                        of the work.
                     </p>
 
                 </div>
 
-            </div>
-
-
-
-            <!-- Research Item 3 -->
-
-            <div class="research-item">
-
-                <img
-                    src="images/project3.jpg"
-                    alt="Visualization for Project Three"
-                    class="research-image"
-                >
-
-                <div class="research-content">
-
-                    <div class="research-title">
-                        Third Research Project
-                    </div>
-
-                    <div class="authors">
-                        <strong>Your Name</strong>,
-                        Collaborator One,
-                        Collaborator Two
-                    </div>
-
-                    <div class="venue">
-                        University Research Project, 2025
-                    </div>
-
-                    <div class="paper-links">
-
-                        <a
-                            href="#"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            Project
-                        </a>
-
-                        <a
-                            href="#"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            Code
-                        </a>
-
-                    </div>
-
-                    <p>
-                        Add a concise explanation of the project here.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =========================
-             Education
-             ========================= -->
-
-        <section>
-
-            <h2>Education</h2>
-
-            <p>
-                <strong>Your University</strong><br>
-                M.Sc. / B.Sc. in Computer Science<br>
-                2022–2026
-            </p>
-
-            <p>
-                Thesis / specialization:
-                [optional thesis or specialization description].
-            </p>
+            </article>
 
         </section>
 
@@ -410,92 +241,62 @@
 
             <h2>Experience</h2>
 
-            <p>
-                <strong>Research Assistant</strong><br>
-                Your University / Research Lab<br>
-                2025–Present
-            </p>
 
-            <p>
-                Briefly describe what you worked on and with whom.
-            </p>
+            <div class="experience-item">
+
+                <div class="experience-header">
+
+                    <strong>
+                        Research Assistant
+                    </strong>
+
+                    <span class="experience-date">
+                        2025 – Present
+                    </span>
+
+                </div>
+
+                <div class="experience-place">
+                    Your University / Research Lab
+                </div>
+
+                <p>
+                    Working with Prof. [Name] on [brief description of your
+                    research area or project].
+                </p>
+
+            </div>
 
 
-            <p>
-                <strong>Research Intern</strong><br>
-                Company / University / Laboratory<br>
-                Summer 2025
-            </p>
+            <div class="experience-item">
 
-            <p>
-                Briefly describe your research or engineering work.
-            </p>
+                <div class="experience-header">
 
-        </section>
+                    <strong>
+                        Research Intern
+                    </strong>
 
+                    <span class="experience-date">
+                        Summer 2025
+                    </span>
 
+                </div>
 
-        <!-- =========================
-             Selected Projects
-             ========================= -->
+                <div class="experience-place">
+                    Company / University / Research Lab
+                </div>
 
-        <section>
+                <p>
+                    Worked on [brief description of the research or technical
+                    work].
+                </p>
 
-            <h2>Selected Projects</h2>
-
-            <p>
-                <strong>
-                    <a
-                        href="#"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Project Name
-                    </a>
-                </strong>
-                — Short description of the project and the main technologies
-                or research ideas involved.
-            </p>
-
-            <p>
-                <strong>
-                    <a
-                        href="#"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Another Project
-                    </a>
-                </strong>
-                — Short description.
-            </p>
+            </div>
 
         </section>
-
-
-
-        <!-- =========================
-             Footer
-             ========================= -->
-
-        <footer>
-
-            <p>
-                © 2026 Your Name
-            </p>
-
-            <p>
-                Last updated September 2026.
-            </p>
-
-        </footer>
 
     </main>
 
-
-    <!-- =========================
-         JavaScript
-         ========================= -->
 
     <script src="scripts.js"></script>
 
