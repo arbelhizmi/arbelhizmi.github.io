@@ -1,60 +1,68 @@
 const toggleButton = document.getElementById("theme-toggle");
-const themeIcon = document.getElementById("theme-icon");
 
 
-// Check whether the visitor previously selected a theme
+// Check whether the visitor previously selected a theme.
 const savedTheme = localStorage.getItem("theme");
 
 
+// If the visitor has already chosen a theme,
+// restore that choice.
 if (savedTheme === "dark") {
 
-    document.documentElement.setAttribute("data-theme", "dark");
+    document.documentElement.setAttribute(
+        "data-theme",
+        "dark"
+    );
 
-    themeIcon.textContent = "☀";
+} else if (savedTheme === "light") {
+
+    document.documentElement.setAttribute(
+        "data-theme",
+        "light"
+    );
 
 } else {
 
-    document.documentElement.setAttribute("data-theme", "light");
+    // On the visitor's first visit,
+    // use their operating system preference.
+    const prefersDark =
+        window.matchMedia(
+            "(prefers-color-scheme: dark)"
+        ).matches;
 
-    themeIcon.textContent = "☾";
+
+    document.documentElement.setAttribute(
+        "data-theme",
+        prefersDark ? "dark" : "light"
+    );
 
 }
 
 
+// Toggle between themes.
 toggleButton.addEventListener("click", () => {
 
     const currentTheme =
-        document.documentElement.getAttribute("data-theme");
-
-
-    if (currentTheme === "dark") {
-
-        document.documentElement.setAttribute(
-            "data-theme",
-            "light"
+        document.documentElement.getAttribute(
+            "data-theme"
         );
 
-        themeIcon.textContent = "☾";
 
-        localStorage.setItem(
-            "theme",
-            "light"
-        );
+    const newTheme =
+        currentTheme === "dark"
+            ? "light"
+            : "dark";
 
-    } else {
 
-        document.documentElement.setAttribute(
-            "data-theme",
-            "dark"
-        );
+    document.documentElement.setAttribute(
+        "data-theme",
+        newTheme
+    );
 
-        themeIcon.textContent = "☀";
 
-        localStorage.setItem(
-            "theme",
-            "dark"
-        );
-
-    }
+    localStorage.setItem(
+        "theme",
+        newTheme
+    );
 
 });
