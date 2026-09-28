@@ -195,6 +195,15 @@ p {
 
     object-fit: cover;
 
+    /*
+       Thin outline around the main photo.
+       Uses the existing theme border color.
+    */
+    border:
+        1px
+        solid
+        var(--border);
+
     border-radius: 7px;
 }
 
@@ -231,7 +240,19 @@ p {
 
     gap: 25px;
 
-    margin-bottom: 38px;
+    /*
+       Thin card border around each publication.
+    */
+    border:
+        1px
+        solid
+        var(--border);
+
+    border-radius: 8px;
+
+    padding: 18px;
+
+    margin-bottom: 25px;
 }
 
 
@@ -450,7 +471,8 @@ p {
 }
 
 
-/* dark mode:
+/*
+   dark mode:
    moon remains a moon, becomes white,
    and appears pressed into the page
 */
@@ -535,6 +557,8 @@ footer {
         flex-direction: column;
 
         gap: 17px;
+
+        padding: 16px;
     }
 
 
@@ -564,3 +588,5 @@ footer {
     }
 
 }
+
+The two important chan
