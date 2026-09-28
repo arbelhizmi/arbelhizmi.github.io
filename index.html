@@ -11,12 +11,60 @@
 
     <meta
         name="description"
-        content="Personal academic website of Your Name."
+        content="Personal academic website of Arbel Hizmi."
     >
 
-    <title>Your Name</title>
+    <title>Arbel Hizmi</title>
 
     <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome: Email, LinkedIn, Twitter icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    >
+
+    <!-- Academicons: Google Scholar icon -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css"
+    >
+
+    <style>
+        /* Social/contact icons */
+        .profile-links {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 16px;
+            margin-top: 20px;
+        }
+
+        .profile-links .social-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            color: var(--link);
+
+            font-size: 1.5rem;
+            line-height: 1;
+
+            transition:
+                transform 0.2s ease,
+                color 0.2s ease;
+        }
+
+        .profile-links .social-icon:hover {
+            color: var(--link-hover);
+            text-decoration: none;
+            transform: scale(1.2);
+        }
+
+        .profile-links .cv-link {
+            font-size: 0.98rem;
+        }
+    </style>
 </head>
 
 
@@ -25,7 +73,6 @@
     <!-- =========================
          Dark / Light Mode Button
          ========================= -->
-
     <button
         id="theme-toggle"
         class="theme-toggle"
@@ -83,40 +130,83 @@
                     research experience, or relevant position].
                 </p>
 
+
+                <!-- =========================
+                     Contact / Social Links
+                     ========================= -->
                 <div class="profile-links">
 
-                    <a href="mailto:arbel1992@gmail.com">
-                        Email
-                    </a>
-
-                    <span>/</span>
-
+                    <!-- Email -->
                     <a
-                        href="assets/cv.pdf"
-                        target="_blank"
-                        rel="noopener noreferrer"
+                        href="mailto:arbel1992@gmail.com"
+                        class="social-icon"
+                        aria-label="Email"
+                        title="Email"
                     >
-                        CV
+                        <i
+                            class="far fa-envelope"
+                            aria-hidden="true"
+                        ></i>
                     </a>
 
-                    <span>/</span>
 
+                    <!-- Google Scholar -->
                     <a
                         href="https://scholar.google.com/citations?user=aAEPU8wAAAAJ&hl=en"
                         target="_blank"
                         rel="noopener noreferrer"
+                        class="social-icon"
+                        aria-label="Google Scholar"
+                        title="Google Scholar"
                     >
-                        Google Scholar
+                        <i
+                            class="ai ai-google-scholar"
+                            aria-hidden="true"
+                        ></i>
                     </a>
 
-                    <span>/</span>
 
+                    <!-- LinkedIn -->
                     <a
                         href="https://www.linkedin.com/in/arbel-hizmi-110230174"
                         target="_blank"
                         rel="noopener noreferrer"
+                        class="social-icon"
+                        aria-label="LinkedIn"
+                        title="LinkedIn"
                     >
-                        LinkedIn
+                        <i
+                            class="fab fa-linkedin"
+                            aria-hidden="true"
+                        ></i>
+                    </a>
+
+
+                    <!-- Twitter -->
+                    <!-- Replace YOUR_TWITTER_USERNAME with your actual username -->
+                    <a
+                        href="https://twitter.com/YOUR_TWITTER_USERNAME"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="social-icon"
+                        aria-label="Twitter"
+                        title="Twitter"
+                    >
+                        <i
+                            class="fab fa-twitter"
+                            aria-hidden="true"
+                        ></i>
+                    </a>
+
+
+                    <!-- CV -->
+                    <a
+                        href="assets/cv.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="cv-link"
+                    >
+                        CV
                     </a>
 
                 </div>
@@ -125,16 +215,15 @@
 
 
             <div class="profile-image-wrapper">
-
                 <img
                     src="assets/profile.jpg"
-                    alt="Your Name"
+                    alt="Arbel Hizmi"
                     class="profile-image"
                 >
-
             </div>
 
         </section>
+
 
         <!-- =========================
              Publications
